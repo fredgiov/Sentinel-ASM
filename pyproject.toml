@@ -1,0 +1,23 @@
+[project]
+name = "sentinel-asm"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "capstone",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q --tb=short --color=yes -p no:sugar --no-header"
